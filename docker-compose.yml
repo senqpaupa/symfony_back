@@ -27,9 +27,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: myapp
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_DB=${DB_DATABASE}
+      POSTGRES_USER=${DB_USERNAME}
+      POSTGRES_PASSWORD=${DB_PASSWORD}
     volumes:
       - dbdata:/var/lib/postgresql/data
     networks:
